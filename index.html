@@ -4,41 +4,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krovick</title>
+
+    <title>Krovick | Un espacio propio</title>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background-color: #101010;
-            color: #e0dede;
+            background: #100d13;
+            color: #e9e1eb;
             font-family: Georgia, serif;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #38283f;
+        }
+
+        .logo {
+            color: #b69acb;
+            font-size: 25px;
+            letter-spacing: 4px;
+        }
+
+        nav a {
+            color: #c8bdcc;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #bd91db;
+        }
+
+        main {
             text-align: center;
-            padding: 80px 20px;
+            padding: 110px 20px 90px;
+        }
+
+        .subtitle {
+            color: #a78bb9;
+            letter-spacing: 5px;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
         }
 
         h1 {
-            color: #a58abf;
-            font-size: 48px;
+            font-size: clamp(55px, 10vw, 95px);
+            font-weight: normal;
+            letter-spacing: 8px;
+            color: #d6c2e2;
+            margin-bottom: 20px;
         }
 
-        p {
-            color: #aaa;
-            font-size: 18px;
+        .description {
+            color: #aaa0ad;
+            font-size: 17px;
+            line-height: 1.8;
+            max-width: 500px;
+            margin: 0 auto;
         }
 
-        hr {
-            border: 1px solid #51435e;
-            max-width: 300px;
+        .separator {
+            width: 70px;
+            border: none;
+            border-top: 1px solid #79588c;
+            margin: 45px auto;
+        }
+
+        .section {
+            padding: 35px 20px;
+            max-width: 750px;
+            margin: auto;
+            text-align: center;
+        }
+
+        h2 {
+            color: #c5a8d5;
+            font-size: 26px;
+            font-weight: normal;
+            margin-bottom: 18px;
+        }
+
+        .section p {
+            color: #aaa0ad;
+            line-height: 1.8;
+        }
+
+        footer {
+            border-top: 1px solid #38283f;
+            text-align: center;
+            padding: 25px;
+            color: #786b7e;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 500px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            main {
+                padding-top: 80px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <h1>Bienvenido a Krovick</h1>
 
-    <hr>
+    <header>
+        <div class="logo">KROVICK</div>
 
-    <p>Un pequeño espacio en construcción.</p>
-    <p>Explorando ideas, creatividad y programación.</p>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#escritos">Escritos</a>
+            <a href="#musica">Música</a>
+        </nav>
+    </header>
+
+    <main id="inicio">
+        <p class="subtitle">Un espacio propio</p>
+
+        <h1>Krovick</h1>
+
+        <p class="description">
+            Entre pensamientos, palabras y sonidos,
+            existe un lugar donde las ideas
+            pueden tomar forma.
+        </p>
+
+        <hr class="separator">
+
+        <p class="description">
+            Bienvenido a este pequeño universo.
+        </p>
+    </main>
+
+    <section class="section" id="escritos">
+        <h2>Escritos</h2>
+        <p>
+            Un rincón para pensamientos,
+            fragmentos y palabras que merecen permanecer.
+        </p>
+    </section>
+
+    <section class="section" id="musica">
+        <h2>Música</h2>
+        <p>
+            Sonidos que acompañan ideas,
+            momentos y emociones.
+        </p>
+    </section>
+
+    <footer>
+        KROVICK · 2026
+    </footer>
 
 </body>
 </html>
