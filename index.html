@@ -110,6 +110,37 @@
             letter-spacing: 2px;
         }
 
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #19131e;
+    border: 1px solid #44304f;
+    padding: 30px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #a77ac0;
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #c5a8d5;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #aaa0ad;
+    font-size: 14px;
+}
+
         @media (max-width: 500px) {
             header {
                 flex-direction: column;
@@ -157,13 +188,46 @@
         </p>
     </main>
 
-    <section class="section" id="escritos">
-        <h2>Escritos</h2>
-        <p>
-            Un rincón para pensamientos,
-            fragmentos y palabras que merecen permanecer.
-        </p>
-    </section>
+    
+<section class="section" id="escritos">
+
+    <h2>Escritos</h2>
+
+    <p>
+        Un rincón para pensamientos,
+        fragmentos y palabras que merecen permanecer.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Fragmentos</h3>
+            <p>
+                Pequeñas partes de pensamientos
+                que encontraron su lugar.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Reflexiones</h3>
+            <p>
+                Ideas, preguntas y perspectivas
+                sobre el mundo.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Poemas</h3>
+            <p>
+                Palabras que intentan expresar
+                aquello que cuesta explicar.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
 
     <section class="section" id="musica">
         <h2>Música</h2>
